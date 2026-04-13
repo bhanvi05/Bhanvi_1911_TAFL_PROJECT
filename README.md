@@ -1,51 +1,84 @@
 # CFG Derivation and Parse Tree Generator
-Live Demo:https://bhanvi-tafl-project.netlify.app/
 
-A browser-based tool to parse a context-free grammar (CFG), derive a target string, and visualize:
+**Live Demo:**  
+https://bhanvi-tafl-project.netlify.app/
 
-- parsed grammar table
-- leftmost and rightmost derivation steps
-- full derivation chains
-- parse tree
+---
+
+## Overview
+
+A browser-based tool to parse a **Context-Free Grammar (CFG)**, derive a target string, and visualize:
+
+- Parsed grammar table  
+- Leftmost and rightmost derivation steps  
+- Full derivation chains  
+- Parse tree  
+
+---
 
 ## Features
 
-- Grammar input with multiple productions per non-terminal
-- Support for epsilon using `ε` (or `epsilon`)
-- Step-by-step derivation viewer with next/previous controls
-- Full derivation view toggle
-- Canvas-based parse tree rendering
-- Quick example grammars
+- Supports multiple productions per non-terminal  
+- Handles epsilon (`ε` or `epsilon`)  
+- Step-by-step derivation navigation (next/previous)  
+- Full derivation view  
+- Canvas-based parse tree visualization  
+- Includes example grammars for quick testing  
+
+---
 
 ## Project Structure
 
-- `index.html`: UI layout and script loading
-- `css/style.css`: visual styles
-- `js/grammar.js`: grammar parsing and validation
-- `js/derivation.js`: derivation/parsing logic and tree construction
-- `js/tree.js`: parse tree renderer
-- `js/app.js`: UI wiring and rendering logic
+```
+.
+├── index.html          # UI layout and entry point
+├── css/
+│   └── style.css       # Styling
+├── js/
+│   ├── grammar.js      # Grammar parsing and validation
+│   ├── derivation.js   # Derivation logic and tree construction
+│   ├── tree.js         # Parse tree rendering
+│   └── app.js          # UI logic and interactions
+```
+
+---
 
 ## Run Locally
 
-1. Open the project folder.
-2. Open `index.html` in a browser.
+1. Download or clone the repository  
+2. Open `index.html` in any browser  
 
-No build step or external dependencies are required.
+No build tools or external dependencies are required.
+
+---
 
 ## Usage
 
-1. Enter grammar rules in the format `A -> alpha | beta` (one rule per line).
-2. Enter a target string.
-3. Click **Generate**.
-4. Inspect:
-   - parsed grammar
-   - step-by-step leftmost/rightmost derivations
-   - full derivation chains
-   - parse tree
+1. Enter grammar rules in the format:
+   ```
+   A -> alpha | beta
+   ```
+2. Enter the target string  
+3. Click **Generate**  
+
+The tool will display:
+- Parsed grammar  
+- Step-by-step derivations  
+- Full derivation chains  
+- Parse tree  
+
+---
 
 ## Notes
 
-- Non-terminals are expected to be uppercase single letters (`A-Z`).
-- The first rule's left-hand symbol is used as the start symbol.
-- If parsing times out, simplify the grammar or remove left recursion.
+- Non-terminals must be uppercase letters (`A–Z`)  
+- The first rule defines the start symbol  
+- If execution slows down:
+  - Simplify the grammar  
+  - Avoid left recursion  
+
+---
+
+## Author
+
+Bhanvi Kumar
